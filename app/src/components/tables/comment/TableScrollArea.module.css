@@ -1,0 +1,24 @@
+.header {
+  position: sticky;
+  top: 0;
+  transition: box-shadow 150ms ease;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 1px solid black;
+}
+
+.scrolled {
+  box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.1);
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
