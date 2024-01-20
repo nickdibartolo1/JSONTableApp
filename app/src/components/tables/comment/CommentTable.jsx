@@ -26,6 +26,7 @@ const CommentTable = () => {
     getResponse();
 
   }, [])
+  
   const rows = data.map((row) => (<Table.Tr key={row.name}>
     <Table.Td>{row.name}</Table.Td>
     <Table.Td>{row.email}</Table.Td>
