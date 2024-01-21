@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Table } from '@mantine/core';
 
-import classes from "./TableScrollArea.module.css"
+import classes from "./CommentTable.module.css"
 
 const CommentTable = () => {
   const [data, setData] = useState([]);
@@ -24,7 +24,6 @@ const CommentTable = () => {
       }
     }
     getResponse();
-
   }, [])
 
   const rows = data.map((row) => {

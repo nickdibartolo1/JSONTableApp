@@ -52,5 +52,3 @@ app.get('/get_data2', async (req, res) => {
 app.listen(port, () => {
     console.log(`Port is listening on port ${port}`)
 })
-
-git commit -m "created a new fetch request in the server"
