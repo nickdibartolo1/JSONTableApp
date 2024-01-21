@@ -33,11 +33,25 @@ app.get('/get_data2', async (req, res) => {
             headers: {
                 "Content-Type": "application/json",
             }
-        })
+        });
 
-        if (!response.ok) {
-            throw new Error('Failed to fetch');
-        }
+        const data = await response.json();
+        console.log("data", data);
+        res.json(data)
+
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+app.get('/get_data3', async (req, res) => {
+    try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/todos", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        });
 
         const data = await response.json();
         console.log("data", data);
