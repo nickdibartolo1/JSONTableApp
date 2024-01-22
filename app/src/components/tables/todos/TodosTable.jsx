@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Table } from '@mantine/core';
+import { Table, Text } from '@mantine/core';
 
 import classes from "./TodosTable.module.css";
 
@@ -36,7 +36,7 @@ const TodosTable = () => {
                     {row.title}
                 </Table.Td>
                 <Table.Td>
-                {row.completed ? 'Completed' : 'Not Completed'}
+                    {row.completed ? 'Completed' : 'Not Completed'}
                 </Table.Td>
             </Table.Tr>
         );
@@ -44,6 +44,11 @@ const TodosTable = () => {
 
     return (
         <div className={classes.layout}>
+            <Text >
+                <h3>
+                Todos Table
+                </h3>
+            </Text>
             <Table verticalSpacing="sm">
                 <Table.Thead>
                     <Table.Tr>

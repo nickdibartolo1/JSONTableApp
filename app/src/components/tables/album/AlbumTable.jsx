@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Table } from '@mantine/core';
+import { Table, Text } from '@mantine/core';
 
 import classes from "./AlbumTable.module.css"
 
@@ -41,6 +41,11 @@ const AlbumTable = () => {
 
     return (
         <div className={classes.layout}>
+            <Text>
+                <h3>
+                    Album Table
+                </h3>
+            </Text>
             <Table verticalSpacing="sm">
                 <Table.Thead>
                     <Table.Tr>
