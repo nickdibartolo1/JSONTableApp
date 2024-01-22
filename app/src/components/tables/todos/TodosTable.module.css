@@ -1,4 +1,5 @@
 .layout{
-    max-height: 500px;
+    max-height: 350px;
     overflow-y: auto;
+    background-color: rgb(255, 255, 255);
   }

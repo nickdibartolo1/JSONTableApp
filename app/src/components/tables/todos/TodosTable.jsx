@@ -36,7 +36,7 @@ const TodosTable = () => {
                     {row.title}
                 </Table.Td>
                 <Table.Td>
-                    {row.completed}
+                {row.completed ? 'Completed' : 'Not Completed'}
                 </Table.Td>
             </Table.Tr>
         );
