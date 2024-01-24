@@ -1,10 +1,11 @@
 .layout{
-    max-height: 350px;
-    overflow-y: auto;
-    background-color: rgb(255, 255, 255);
-    border-radius: 1.3rem;
-  }
+  max-height: 350px;
+  overflow-y: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1.3rem;
+}
 
-  /* .text{
-   
-  } */
+
+.text{
+  text-align: left;
+}

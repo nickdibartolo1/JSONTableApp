@@ -29,10 +29,10 @@ const AlbumTable = () => {
     const rows = data.map((row, index) => {
         return (
             <Table.Tr key={index}>
-                <Table.Td>
+                <Table.Td className={classes.text}>
                     {row.id}
                 </Table.Td>
-                <Table.Td>
+                <Table.Td className={classes.text}>
                     {row.title}
                 </Table.Td>
             </Table.Tr>

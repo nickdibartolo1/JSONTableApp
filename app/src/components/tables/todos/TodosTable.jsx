@@ -29,13 +29,13 @@ const TodosTable = () => {
     const rows = data.map((row, index) => {
         return (
             <Table.Tr key={index}>
-                <Table.Td>
+                <Table.Td className={classes.text}>
                     {row.id}
                 </Table.Td>
-                <Table.Td>
+                <Table.Td className={classes.text}>
                     {row.title}
                 </Table.Td>
-                <Table.Td>
+                <Table.Td className={classes.text}>
                     {row.completed ? 'Completed' : 'Not Completed'}
                 </Table.Td>
             </Table.Tr>

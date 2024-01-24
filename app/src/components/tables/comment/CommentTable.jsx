@@ -28,11 +28,11 @@ const CommentTable = () => {
 
   const rows = data.map((row) => {
     return (
-      <Table.Tr key={row.title}>
-        <Table.Td>
+      <Table.Tr  key={row.title}>
+        <Table.Td className={classes.text}>
           {row.name}
         </Table.Td>
-        <Table.Td>
+        <Table.Td className={classes.text}>
           {row.email}
         </Table.Td>
       </Table.Tr>
