@@ -24,7 +24,7 @@ app.get("/get_data", async (req, res) => {
         console.log(error)
     }
 
-})
+});
 
 app.get('/get_data2', async (req, res) => {
     try {
@@ -42,7 +42,7 @@ app.get('/get_data2', async (req, res) => {
     } catch (error) {
         console.log(error)
     }
-})
+});
 
 app.get('/get_data3', async (req, res) => {
     try {
@@ -60,7 +60,25 @@ app.get('/get_data3', async (req, res) => {
     } catch (error) {
         console.log(error)
     }
-})
+});
+
+app.get('/get_data4', async (req, res) => {
+    try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        });
+
+        const data = await response.json();
+        console.log("data", data);
+        res.json(data)
+
+    } catch (error) {
+        console.log(error)
+    }
+});
 
 
 app.listen(port, () => {

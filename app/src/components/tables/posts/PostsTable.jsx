@@ -1,23 +1,22 @@
 import { useEffect, useState } from "react";
 import { Table, Text } from '@mantine/core';
 
-import classes from "./AlbumTable.module.css"
+import classes from "./PostsTable.module.css";
 
-const AlbumTable = () => {
+const PostsTable = () => {
     const [data, setData] = useState([])
-
 
     useEffect(() => {
         async function getResponse() {
             try {
-                const fetchAlbumData = await fetch("http://localhost:3005/get_data2");
+                const fetchPostsData = await fetch("http://localhost:3005/get_data4");
 
-                if (!fetchAlbumData.ok) {
+                if (!fetchPostsData.ok) {
                     throw new Error('Failed to fetch');
                 }
 
-                const response_data = await fetchAlbumData.json();
-                console.log("data", response_data);
+                const response_data = await fetchPostsData.json();
+                console.log("Posts", response_data);
                 setData(response_data)
             } catch (error) {
                 console.log(error)
@@ -25,6 +24,7 @@ const AlbumTable = () => {
         }
         getResponse()
     }, [])
+
 
     const rows = data.map((row, index) => {
         return (
@@ -35,22 +35,27 @@ const AlbumTable = () => {
                 <Table.Td className={classes.text}>
                     {row.title}
                 </Table.Td>
+                <Table.Td className={classes.text}>
+                    {row.body}
+                </Table.Td>
             </Table.Tr>
         );
     });
+
 
     return (
         <div className={classes.layout}>
             <Text>
                 <h3>
-                    Album Table
+                    Posts Table
                 </h3>
             </Text>
             <Table verticalSpacing="sm">
                 <Table.Thead>
                     <Table.Tr>
-                        <Table.Th>Chart</Table.Th>
-                        <Table.Th>Album</Table.Th>
+                        <Table.Th>ID</Table.Th>
+                        <Table.Th>Title</Table.Th>
+                        <Table.Th>Description</Table.Th>
                     </Table.Tr>
                 </Table.Thead>
                 <Table.Tbody>{rows}</Table.Tbody>
@@ -59,4 +64,4 @@ const AlbumTable = () => {
     )
 }
 
-export default AlbumTable;
+export default PostsTable;

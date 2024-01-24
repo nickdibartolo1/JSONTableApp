@@ -4,6 +4,7 @@ import TodosTable from './tables/todos/TodosTable';
 import { Grid, Container } from '@mantine/core';
 
 import classes from './TableGrid.module.css'
+import PostsTable from './tables/posts/PostsTable';
 
 
 const TableGrid = () => {
@@ -18,6 +19,9 @@ const TableGrid = () => {
                 </Grid.Col>
                 <Grid.Col className={classes.tableCol}>
                     <AlbumTable />
+                </Grid.Col>
+                <Grid.Col className={classes.tableCol}>
+                    <PostsTable />
                 </Grid.Col>
             </Grid>
         </Container>
