@@ -9,22 +9,22 @@ import PostsTable from './tables/posts/PostsTable';
 
 const TableGrid = () => {
     return (
-        <Container className={classes.container}>
-            <Grid>
-                <Grid.Col className={classes.tableCol}>
-                    <CommentTable />
-                </Grid.Col>
-                <Grid.Col className={classes.tableCol} >
-                    <TodosTable />
-                </Grid.Col>
-                <Grid.Col className={classes.tableCol}>
-                    <AlbumTable />
-                </Grid.Col>
-                <Grid.Col className={classes.tableCol}>
-                    <PostsTable />
-                </Grid.Col>
-            </Grid>
-        </Container>
+            <Container className={classes.container}>
+                <Grid>
+                    <Grid.Col className={classes.tableCol}>
+                        <CommentTable />
+                    </Grid.Col>
+                    <Grid.Col className={classes.tableCol} >
+                        <TodosTable />
+                    </Grid.Col>
+                    <Grid.Col className={classes.tableCol}>
+                        <AlbumTable />
+                    </Grid.Col>
+                    <Grid.Col className={classes.tableCol}>
+                        <PostsTable />
+                    </Grid.Col>
+                </Grid>
+            </Container>
     )
 }
 
